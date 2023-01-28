@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background: #FCFCFD;
+        }
+
+        .gradient_img {
+            /* position: absolute; */
+            width: 100%;
+            height: 30vh;
+            object-fit: fill;
+            left: -112px;
+            right: -112px;
+            top: 0px;
+
+        }
+
+        .head_flex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap; 
+            height: 25vh;
+            gap: 3.5vw;
+        }
+
+        .avtar {
+            position: relative;
+            left: 2.5vw;
+            gap: 50vw;
+            bottom: 20px;
+            height: 170px;
+            width: 170px;
+        }
+
+        .avtar_img {
+
+            /* height: 160px;
+            width: 160px; */
+            /* background-color: blue; */
+            /* border: 4px solid #FFFFFF; */
+
+            /* Shadow/lg */
+            box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+            border-radius: 200px;
+            /* left:20px; */
+        }
+
+        .blue_svg {
+            position: absolute;
+            left: 77.4%;
+            right: -34.7%;
+            top: 74.79%;
+            bottom: 15.92%;
+            transform: rotate(22.5deg);
+        }
+
+        .tick_svg {
+            position: absolute;
+
+            left: 81.56%;
+            right: 29.68%;
+            top: 79.68%;
+            bottom: 26.56%;
+        }
+
+        .name {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 38px;
+
+        }
+
+        .email {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #475467;
+        }
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            width: 50vw;
+            height: 10vh;
+            margin-left: 0vw;
+            margin-top: 5vh;
+        }
+
+        .content {
+            flex-grow: 1.2;
+            flex-wrap: wrap;
+            display: flex;
+            flex-direction: row;
+        }
+
+
+        .buttons_cont {
+            justify-content: right;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 12px;
+            margin-top: 30px;
+            width: 30vw;
+            height: 30px;
+            /* margin-right: 2px;            */
+
+        }
+
+        .flex_cnt {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+            background-color: #FCFCFD;
+
+        }
+
+        .itm {
+            display: flex;
+            flex-direction: row;
+            
+            width: 90vw;
+
+        }
+
+        .supptxt1,
+        .supptxt2 {
+            width: 33vw;
+
+        }
+
+        .inp1,
+        .inp2 {
+            flex-grow: 3;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 24px;
+            gap: 24px;
+            /* height: 435px; */
+
+            background: #FFFFFF;
+            border: 1px solid #EAECF0;
+            box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+            border-radius: 12px;
+        }
+
+        .inp_box {
+
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px 14px;
+            gap: 8px;
+            width: 98%;
+            height: 44px;
+            background: #FFFFFF;
+            border: 1px solid #D0D5DD;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 8px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+
+        }
+
+        .lbl {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+
+            color: #344054;
+
+
+        }
+
+        h4 {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: #344054;
+
+        }
+
+        p {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #475467;
+
+        }
+
+        /* ------------------------------HEADER BUTTONS--------------------------------------------------- */
+        .button {
+            cursor: pointer;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 16px;
+            gap: 8px;
+
+            width: 100px;
+            height: 40px;
+
+            background: #FFFFFF;
+
+            border: 1px solid #D0D5DD;
+
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 8px;
+        }
+
+        .view_profile {
+            width: 115px;
+            background: #7F56D9;
+            color: #FFFFFF;
+        }
+
+        .name_field {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            width: 55vw;
+            margin-top: 10px;
+            height: 15px;
+            gap: 9%;
+
+        }
+
+        .email_field {
+
+
+            justify-content: flex-start;
+            margin: 57px 0px;
+            align-items: flex-start;
+            padding: 0px;
+            width: 55vw;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            height: 15px;
+            width: 94%;
+
+        }
+
+        .firstName {
+            /* margin: auto; */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 3px;
+            height: 15px;
+            width: 45%;
+
+        }
+
+        .lastName {
+            /* margin: auto; */
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 15px;
+            width: 45%;
+
+            gap: 3px;
+
+        }
+
+        .upload_cont {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            height: 126px;
+
+            gap: 5%;
+            width: 54.5vw;
+        }
+
+        .upload {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 16px 24px;
+            gap: 4px;
+            width: 86%;
+            height: 126px;
+            background: #FFFFFF;
+            border: 1px solid #D0D5DD;
+            border-radius: 12px;
+        }
+
+        .upload_txt {
+
+            width: 45%;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+
+            color: #475467;
+        }
+
+        .upload_txt_button {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+
+            color: #6941C6;
+        }
+
+        .avtar_cont {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            width: 64px;
+            height: 64px;
+
+            background: url(avtar.png);
+            border-radius: 200px;
+        }
+
+        /* ------------------------------HEADER BUTTONS--------------------------------------------------- */
+    </style>
+</head>
+
+<header>
+    <div class="gradient_img_cont">
+        <img src="gradient.jpg" class="gradient_img">
+    </div>
+    <div class="head_flex">
+        <div class="avtar">
+            <img src="dp2.jpg" class="avtar_img">
+
+            <img src="blue.svg" class="blue_svg">
+            <img src="tick.svg" class="tick_svg">
+
+        </div>
+        <div class="content">
+            <div class="title">
+                <div class="name">
+                    Olivia Rhye
+                </div>
+                <div class="email">
+                    olivia@untitledui.com
+                </div>
+
+            </div>
+            <div class="buttons_cont">
+                <button class="button ">
+                    <img src="share.png" alt="">
+                    Share</button>
+                <button class="button view_profile">View Profile</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="spce" style="height:10vh;"></div>
+    <div class="flex_cnt">
+        <div class="itm itm1">
+            <div class="supptxt1">
+                <h4>
+                    Personal Info
+                </h4>
+                <p>Update your photos and personal details</p>
+            </div>
+            <div class="inp1">
+                <div class="name_field">
+
+                    <div class="firstName">
+                        <div class="lbl">First Name</div>
+                        <input type="text" class="inp_box" placeholder="Olivia">
+
+
+                    </div>
+                    <div class="lastName">
+                        <div class="lbl">Last Name</div>
+                        <input type="text" class="inp_box" placeholder="Rhye">
+
+
+                    </div>
+                </div>
+
+                <div class="email_field" style="width:99%">
+                    <div class="lbl">Email address</div>
+                    <input type="text" class="inp_box" placeholder="olivia@untitlededu.com" style="width:100%">
+
+                </div>
+
+                <div class="upload_cont">
+                    <div class="avtar_cont"></div>
+                    <div class="upload">
+                        <img src="upload.png" alt="">
+                        <div class="upload_txt">
+                            <span class="upload_txt_button">Click to upload</span> or drag and drop.
+                        </div>
+                        <div class="upload_txt" style="width: 50%;">
+                            SVG, PNG, JPG or GIF. (max 800x400px)
+                        </div>
+                    </div>
+                </div>
+                <div class="separator" style="width: 100%;height: 1px; background: #EAECF0;"></div>
+                
+                <footer>
+                    <div class="buttons_cont" style="width: 53vw;">
+                        <button class="button ">
+                            Cancel
+                        </button>
+                        <button class="button view_profile" style="width: 139px;">Save Changes</button>
+                    </div>
+                </footer>
+
+
+
+
+            </div>
+        </div>
+
+        <div class="separator" style="width: 90vw;height: 1px; background: #EAECF0;"></div>
+        <div class="itm itm2">
+            <div class="supptxt2">
+                <h4>
+                    Profile
+                </h4>
+                <p>Update your portfolio and bio </p>
+            </div>
+            <div class="inp2">
+                <div class="email_field" style="width:95%; margin: 30px 0px;">
+                    <div class="lbl">Username</div>
+                    <input type="text" class="inp_box" placeholder="olivia" style="width:100%">
+
+                </div>
+                <div class="email_field" style="width:95%; margin: 30px 0px;">
+                    <div class="lbl">Website</div>
+                    <input type="text" class="inp_box" placeholder="www.untitlededu.com" style="width:100%">
+
+                </div>
+                <div class="email_field" style="width:95%; margin: 30px 0px;">
+                    <div class="lbl">Description</div>
+                    <input type="text" class="inp_box" style="height: 128px;padding: 12px 14px;width:100%; gap: 8px;"
+                        placeholder="I'm a Product Designer based in Melbourne, Australia. I specialise in UX/UI design, brand strategy and Webflow Development.">
+
+                </div>
+                <div class="email_field" style="width:95%; margin: 30px 0px;">
+                    <div class="lbl">275 characters left</div>
+                    <span  class="inp_box"  style="width:40%;margin-top: 15px;">Regular</span>
+
+                </div>
+                <div class="email_field" style="width:95%; margin: 30px 0px;">
+                    <div class="lbl">Country</div>
+                    <span  class="inp_box"  style="width:100%">Australia</span>
+
+                </div>
+                <div class="email_field" style="width:95%; margin: 30px 0px;">
+                    <div class="lbl">Time Zone</div>
+                    <span  class="inp_box"  style="width:100%">PST UTC-08:00</span>
+
+                </div>
+
+                <footer>
+                    <div class="buttons_cont" style="width: 53vw;">
+                        <button class="button ">
+                            Cancel
+                        </button>
+                        <button class="button view_profile" style="width: 139px;">Save Changes</button>
+                    </div>
+                </footer>
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
